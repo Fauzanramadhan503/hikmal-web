@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kopi Senja — Kedai Kopi & Ruang Santai</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Navbar -->
+  <header class="navbar">
+    <div class="logo">☕ Kopi Senja</div>
+    <nav class="nav-links" id="navLinks">
+      <a href="#tentang">Tentang</a>
+      <a href="#menu">Menu</a>
+      <a href="#reservasi">Reservasi</a>
+    </nav>
+    <button class="menu-toggle" id="menuToggle" aria-label="Buka Menu">☰</button>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-content">
+      <span class="tag">Biji Kopi Nusantara Pilihan</span>
+      <h1>Hangatnya Kopi, Tenangnya Cerita</h1>
+      <p>
+        Nikmati racikan espresso segar, manual brew khas nusantara, dan camilan
+        rumahan di ruang yang nyaman untuk bekerja maupun bersantai.
+      </p>
+      <div class="hero-actions">
+        <a href="#menu" class="btn btn-primary">Lihat Menu</a>
+        <a href="#reservasi" class="btn btn-outline">Booking Meja</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Tentang Kami -->
+  <section id="tentang" class="section container">
+    <div class="about-grid">
+      <div>
+        <h2>Tentang Kopi Senja</h2>
+        <p>
+          Berdiri sejak 2021, Kopi Senja menghadirkan pengalaman ngopi yang
+          santai dengan biji kopi sangrai lokal dari Gayo, Kintamani, dan
+          Toraja. Kami percaya secangkir kopi yang baik selalu punya cerita.
+        </p>
+      </div>
+      <div class="info-card">
+        <h3>Jam Operasional</h3>
+        <p>Senin – Jumat: 07.30 – 22.00 WIB</p>
+        <p>Sabtu – Minggu: 08.00 – 23.00 WIB</p>
+        <p class="location">📍 Jl. Kenangan No. 14, Jakarta</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Daftar Menu -->
+  <section id="menu" class="section menu-section">
+    <div class="container">
+      <div class="section-header">
+        <h2>Menu Favorit</h2>
+        <div class="filter-buttons" id="filterButtons">
+          <button class="filter-btn active" data-category="all">Semua</button>
+          <button class="filter-btn" data-category="kopi">Kopi</button>
+          <button class="filter-btn" data-category="non-kopi">Non-Kopi</button>
+          <button class="filter-btn" data-category="makanan">Makanan</button>
+        </div>
+      </div>
+
+      <div class="menu-grid" id="menuGrid"></div>
+    </div>
+  </section>
+
+  <!-- Reservasi Meja -->
+  <section id="reservasi" class="section container">
+    <div class="reservation-box">
+      <h2>Reservasi Meja</h2>
+      <p>Pesan tempat terlebih dahulu agar kunjunganmu lebih nyaman.</p>
+
+      <form id="reservationForm" class="reservation-form">
+        <div class="form-group">
+          <label for="nama">Nama Lengkap</label>
+          <input type="text" id="nama" placeholder="Contoh: Raka Pratama" required />
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="tanggal">Tanggal</label>
+            <input type="date" id="tanggal" required />
+          </div>
+          <div class="form-group">
+            <label for="jumlah">Jumlah Tamu</label>
+            <select id="jumlah">
+              <option value="1-2 Orang">1–2 Orang</option>
+              <option value="3-4 Orang">3–4 Orang</option>
+              <option value="5+ Orang">5+ Orang</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="catatan">Catatan Tambahan (Opsional)</label>
+          <input type="text" id="catatan" placeholder="Contoh: Dekat colokan / area smoking" />
+        </div>
+
+        <button type="submit" class="btn btn-primary full-width">Konfirmasi Reservasi</button>
+      </form>
+
+      <div id="reservationResult" class="result-message" hidden></div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>© 2026 Kopi Senja. Dibuat dengan ☕ & kode.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
